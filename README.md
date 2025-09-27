@@ -1,70 +1,58 @@
-# 🌍 Language Translator App
+# Language Translator App
 
 This is a Python-based desktop application that translates speech from one language to another. The app uses speech recognition to capture voice input, translates it using Google Translate, and reads out the translated text using text-to-speech.
 
----
+## Overview
 
-## 🧠 Overview
+The purpose of this project is to provide an accessible way to break language barriers. It allows users to speak in one language and hear the translation in another using a simple graphical interface.
 
-The goal of this project is to provide a user-friendly way to break language barriers. It helps users speak in one language and hear the translation in another using a clean graphical interface.
+## Features
 
----
+- Speech Recognition – Converts voice into text
+- Language Translation – Translates the recognized text into another language
+- Text-to-Speech – Converts translated text into speech
+- Graphical User Interface – Built using Tkinter
+- Supports multiple popular languages
 
-## 🎯 Features
+## Technologies Used
 
-- 🎤 **Speech Recognition** – Converts your voice into text
-- 🌐 **Language Translation** – Translates text into another language
-- 🔊 **Text-to-Speech** – Reads out the translated text
-- 🖼️ **User-Friendly GUI** – Built using Tkinter
-- ✅ Supports major languages like English, Urdu, Arabic, French, German, and more
+- Python 3.x
+- Tkinter – For the GUI
+- SpeechRecognition – For capturing and processing audio input
+- googletrans – For translating text
+- gTTS (Google Text-to-Speech) – For generating speech from text
+- os module – For audio playback handling
 
----
-
-## 🛠️ Technologies Used
-
-- **Python 3.x**
-- **Tkinter** – For GUI
-- **SpeechRecognition** – To recognize voice input
-- **googletrans** – For translating text between languages
-- **gTTS (Google Text-to-Speech)** – For audio output
-- **OS Module** – For handling audio playback
-
----
-
-## 💻 System Requirements
+## System Requirements
 
 - Python 3.6 or higher
 - Microphone (for speech input)
 - Speakers or headphones (for audio output)
-- Internet connection (for using Google APIs)
+- Internet connection (for API access)
 
----
+## Installation
 
-## 📦 Installation
+1. Install Python from: https://www.python.org/downloads/
 
-1. Make sure Python is installed on your system:  
-   👉 [Download Python](https://www.python.org/downloads/)
+2. Download or clone this repository.
 
-2. Clone this repository or download the ZIP.
+3. Open a terminal or command prompt in the project directory and run:
+python language_translator.py
 
-3. Open terminal / command prompt in the project folder and install the required libraries:
+## How It Works
 
-```bash
-pip install SpeechRecognition googletrans==4.0.0-rc1 gTTS
+Select the input language and the target language from dropdown menus.
 
-🚀 How It Works
+Click the "Start Listening" button to begin voice capture.
 
-Select input and target languages from the dropdown menus.
+Speak into your microphone clearly.
 
-Click the Start Listening button to record your voice.
+Click the "Stop & Translate" button to process the audio.
 
-Speak clearly into your microphone.
+The app will display the original and translated text and play the translated speech aloud.
 
-Click Stop & Translate to process the audio.
 
-The app will show both original and translated text and play the translated speech.
-
-🌍 Supported Languages
+## Supported Languages
 
 English
 
@@ -88,24 +76,18 @@ Chinese
 
 Italian
 
-(More languages can be added easily in the code.)
-⚠️ Error Handling
+(More languages can be added by modifying the language mapping in the code.)
 
-🛑 Displays messages if:
+## Error Handling
 
-Microphone input fails
+Displays error messages if:
 
-Speech isn't clear
+Microphone access fails
 
-Translation API fails
+Speech is not detected
 
-Language isn't selected
-Acknowledgments
+Selected language is not supported
 
-Google Speech Recognition API
-
-Google Translate API
-
-gTTS (Google Text-to-Speech)
-
-Python & Tkinter community
+Google API request fails
+```bash
+pip install SpeechRecognition googletrans==4.0.0-rc1 gTTS
